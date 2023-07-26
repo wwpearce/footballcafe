@@ -1,16 +1,33 @@
+@import '../../global-styles/_variables.scss';
+
 .Ticker {
   position: absolute;
   bottom: 20px;
   left: 0;
   width: 100%;
-  height: 20px;
+  height: auto;
   overflow: hidden;
+  font-family: "avantgarde-bold";
+  color: $primary-color;
+  text-transform: capitalize;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .Ticker__content {
   display: inline-block;
   white-space: nowrap;
-  animation: ticker 20s linear infinite;
+  animation: ticker $ticker-speed linear infinite;
+  height: 100%;
+  font-size: 1.5rem;
+  &.paused {
+    animation-play-state: paused;
+  }
+  &.desktop {
+    font-size: 2.25rem;
+  }
 }
 
 .Ticker__content span {
@@ -19,12 +36,9 @@
 
 @keyframes ticker {
   0% {
-    transform: translateX(0);
-  }
-  99% {
-    transform: translateX(-99%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-50%);
   }
 }

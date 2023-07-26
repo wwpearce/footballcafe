@@ -1,20 +1,29 @@
-@font-face {
-    font-family: "AvantGard1";
-    src: local("AVGARDD_2"),
-     url("./fonts/Avantgarde/AVGARDD_2.TTF") format("truetype");
-    font-weight: bold;
-   }
+@import url("https://use.typekit.net/bzz3ybv.css");
 
 @font-face {
-font-family: "AvantGard2";
-src: local("AVGARDDO_2"),
-    url("./fonts/Avantgarde/AVGARDDO_2.TTF") format("truetype");
-font-weight: bold;
+    font-family: "avantgarde-regular";
+    src: local("avantgarde-regular"),
+        url("../fonts/Avantgarde/avantgarde-regular.TTF") format("truetype");
+    font-weight: normal;
 }
 
 @font-face {
-font-family: "AvantGard3";
-src: local("AVGARDN_2"),
-    url("./fonts/Avantgarde/AVGARDN_2.TTF") format("truetype");
-font-weight: bold;
+    font-family: "avantgarde-bold";
+    src: local("avantgarde-bold"),
+        url("../fonts/Avantgarde/avantgarde-bold.TTF") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "nimbus-regular";
+    src: local("nimbus-regular"),
+        url("../fonts/nimbus-sans/nimbus-regular.otf") format("otf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "nimbus-bold";
+    src: local("nimbus-bold"),
+        url("../fonts/nimbus-sans/nimbus-bold.otf") format("otf");
+    font-weight: bold;
 }

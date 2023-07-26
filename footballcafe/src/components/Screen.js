@@ -3,9 +3,7 @@ import './Screen.scss';
 import Textblock from './Textblock/Textblock';
 import Nav from './Nav/Nav';
 import Ticker from './Ticker/Ticker';
-
-
-import { ReactComponent as OpenMenuButton } from '../svg/open-button.svg';
+import MenuButton from './MenuButton/MenuButton';
 
 function Screen({ backgroundImage, isMobile }) {
   const style = backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : {};
@@ -19,10 +17,10 @@ function Screen({ backgroundImage, isMobile }) {
   return (
     <div className={`Screen ${isMobile ? 'mobile' : 'desktop'}`}>
         <div className={`Screen__content ${isMobile ? 'mobile' : 'desktop'}`} style={style}>
-          <OpenMenuButton className={`open-button-svg ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`} onClick={toggleNav} />
+          <MenuButton className={`menu-button-svg ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`} isOpen={isOpen} toggleNav={toggleNav} />
           <Nav isMobile={isMobile} isOpen={isOpen} />
-          <Textblock isMobile={isMobile} />
-          <Ticker />
+          <Textblock isMobile={isMobile} isOpen={isOpen}/>
+          <Ticker isMobile={isMobile}/>
         </div>
     </div>
   );

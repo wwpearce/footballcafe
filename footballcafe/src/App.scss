@@ -1,8 +1,14 @@
 @use './global-styles/_variables.scss';
 @use './global-styles/_reset.scss';
+@use './global-styles/_fonts.scss';
 
 .App {
   text-align: center;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+}
+
+p {
+  font-family: "nimbus-sans";
 }

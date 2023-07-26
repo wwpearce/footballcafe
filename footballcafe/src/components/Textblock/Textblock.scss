@@ -12,4 +12,11 @@
         width: 50%;
         margin-top: 0;
     }
+    &.mobile {
+        transition: all $nav-speed $nav-ease;
+        transform: translateX(0);
+        &.open {
+            transform: translateX(150vw);
+        }
+    }
 }
