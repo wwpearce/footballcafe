@@ -22,6 +22,8 @@
 
     background-size: cover;
     padding: $content-padding__mobile;
+    background-color: white;
+    background-image: none !important;
     
     &.desktop {
         flex-direction: row;
@@ -31,6 +33,17 @@
     }
 }
 
-path {
-    color: $primary-color;
+.open-button-svg {
+    z-index: 2;
+    transition: all $nav-speed $nav-ease;
+    &.open {
+        transform:rotate(43deg);
+        #open-button {
+            // transform:rotate(90deg);
+        }
+    }
+}
+
+svg, path {
+    // color: $primary-color;
 }

@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './fonts/Avantgarde/AVGARDD_2.TTF';
+import './fonts/Avantgarde/AVGARDDO_2.TTF';
+import './fonts/Avantgarde/AVGARDN_2.TTF';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

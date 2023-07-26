@@ -4,10 +4,10 @@
     width: 100%;
     text-align: left;
     color: red;
-    // font-size: 1.5rem;
-    margin-top: 1.25rem;
-    line-height: 1.75rem;
+    margin-top: $paragraph-font-size;
+    line-height: $paragraph-font-size;
     font-size: $paragraph-font-size;
+    color: $primary-color;
     &.desktop {
         width: 50%;
         margin-top: 0;

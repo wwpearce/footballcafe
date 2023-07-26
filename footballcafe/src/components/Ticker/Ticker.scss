@@ -1,0 +1,30 @@
+.Ticker {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+}
+
+.Ticker__content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
+}
+
+.Ticker__content span {
+  padding-right: 20px;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  99% {
+    transform: translateX(-99%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
