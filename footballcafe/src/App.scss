@@ -1,3 +1,6 @@
+@use './global-styles/_variables.scss';
+@use './global-styles/_reset.scss';
+
 .App {
   text-align: center;
   width: 100vw;

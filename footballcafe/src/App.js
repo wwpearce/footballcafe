@@ -58,8 +58,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Screen backgroundImage={backgroundImage} />
+    <div className={`App ${isMobile() ? 'mobile' : 'desktop'}`}>
+      <Screen backgroundImage={backgroundImage} isMobile={isMobile()} />
     </div>
   );
 }

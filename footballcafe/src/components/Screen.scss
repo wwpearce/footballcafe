@@ -1,3 +1,5 @@
+@import '../global-styles/_variables.scss';
+
 .Screen {
     display: flex;
     flex-direction: column;
@@ -6,18 +8,29 @@
     height: 100vh;
     width: 100vw;
 
-    background-color: beige;
+    background-color: $margin-color;
 }
 
 .Screen__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     height: 100vh;
     width: 100vw;
-    max-width: 1920px;
+    max-width: $content-max_width;
 
-    background-color: white;
     background-size: cover;
+    padding: $content-padding__mobile;
+    
+    &.desktop {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: $content-padding__desktop;
+    }
+}
+
+path {
+    color: $primary-color;
 }
