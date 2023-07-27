@@ -33,6 +33,11 @@ function App() {
     return /mobile|android|iphone|ipad|phone/i.test(userAgent);
   };
 
+  function isLandscape() {
+      const { width, height } = window.screen;
+      return width > height;
+  };
+
   const desktopBackgroundImages = [
     desktopBackgroundImage1,
     desktopBackgroundImage2,
@@ -53,6 +58,15 @@ function App() {
     mobileBackgroundImage7,
   ];
 
+  (function lockPortraitMode() {
+    if (typeof window.screen !== 'undefined') {
+      const lockOrientation = window.screen.lockOrientation || window.screen.mozLockOrientation || window.screen.msLockOrientation || (window.screen.orientation && window.screen.orientation.lock);
+      if (lockOrientation) {
+        lockOrientation.call(window.screen, 'portrait');
+      }
+    }
+  })();
+
   useEffect(() => {
     const randomBackgroundImage = getRandomBackgroundImage();
     const img = new Image();
@@ -64,7 +78,7 @@ function App() {
   }, []);
 
   return (
-    <div className={"App"}>
+    <div className={`App ${isMobile() ? 'mobile' : 'desktop'} ${isLandscape() ? 'landscape' : 'portrait'}`}>
       <Screen backgroundImage={backgroundImage} isMobile={isMobile()} backgroundLoaded={backgroundLoaded}/>
     </div>
   );

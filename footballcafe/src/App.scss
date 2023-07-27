@@ -25,3 +25,15 @@ p {
 // @media screen and (min-width: 700px) {
 //     body{font-size: 200%;}
 // }
+
+@media only screen and (orientation: landscape) {
+  .App {
+    &.mobile {
+      min-height: 500px;
+      .Screen {
+        height: 100%;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

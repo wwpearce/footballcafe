@@ -16,6 +16,12 @@
   }
 }
 
+@media only screen and (orientation: landscape) {
+  .Ticker {
+    display: none;
+  }
+}
+
 .Ticker__content {
   display: inline-block;
   white-space: nowrap;
