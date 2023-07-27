@@ -20,7 +20,7 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
           <MenuButton className={`menu-button-svg ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`} isOpen={isOpen} toggleNav={toggleNav} />
           <Nav isMobile={isMobile} isOpen={isOpen} />
           <Textblock isMobile={isMobile} isOpen={isOpen}/>
-          <Ticker isMobile={isMobile}/>
+          <Ticker isMobile={isMobile} backgroundLoaded={backgroundLoaded}/>
         </div>
     </div>
   );

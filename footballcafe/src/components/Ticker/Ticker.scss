@@ -22,6 +22,10 @@
   animation: ticker $ticker-speed linear infinite;
   height: 100%;
   font-size: 1.5rem;
+  animation-play-state: paused;
+  &.loaded {
+    animation-play-state: running;
+  }
   &.paused {
     animation-play-state: paused;
   }
