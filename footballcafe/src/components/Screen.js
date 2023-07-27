@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './Screen.scss';
 import Textblock from './Textblock/Textblock';
 import Nav from './Nav/Nav';
@@ -14,8 +14,38 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
     console.log("sup");
   };
 
+  const handleTouchStart = (event) => {
+    if (isMobile && isOpen) {
+      const touch = event.touches[0];
+      const startX = touch.clientX;
+      const startY = touch.clientY;
+      event.target.addEventListener('touchmove', handleTouchMove);
+      event.target.addEventListener('touchend', handleTouchEnd);
+
+      function handleTouchMove(event) {
+        const touch = event.touches[0];
+        const deltaX = touch.clientX - startX;
+        const deltaY = touch.clientY - startY;
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+          event.preventDefault();
+        }
+      }
+
+      function handleTouchEnd(event) {
+        event.target.removeEventListener('touchmove', handleTouchMove);
+        event.target.removeEventListener('touchend', handleTouchEnd);
+        const touch = event.changedTouches[0];
+        const deltaX = touch.clientX - startX;
+        const deltaY = touch.clientY - startY;
+        if (Math.abs(deltaX) > Math.abs(deltaY) && deltaX < -50) {
+          setIsOpen(false);
+        }
+      }
+    }
+  };
+
   return (
-    <div className={`Screen ${isMobile ? 'mobile' : 'desktop'} ${backgroundLoaded ? 'fade-in' : 'black'}`}>
+    <div className={`Screen ${isMobile ? 'mobile' : 'desktop'} ${backgroundLoaded ? 'fade-in' : 'black'}`} onTouchStart={handleTouchStart}>
         <div className={`Screen__content ${isMobile ? 'mobile' : 'desktop'}`} style={style}>
           <MenuButton className={`menu-button-svg ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`} isOpen={isOpen} toggleNav={toggleNav} />
           <Nav isMobile={isMobile} isOpen={isOpen} />
@@ -25,6 +55,5 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
     </div>
   );
 }
-
 
 export default Screen;
