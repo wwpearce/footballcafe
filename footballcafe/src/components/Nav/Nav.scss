@@ -10,6 +10,7 @@
   height: 100%;
   transition: all $nav-speed $nav-ease;
   font-family: "avantgarde-bold";
+  user-select: none;
 
 &.open {
     transform: translateX(0);

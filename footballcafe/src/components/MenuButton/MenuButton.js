@@ -1,5 +1,6 @@
 import { ReactComponent as OpenMenuButton } from '../../svg/open-button.svg';
 import { ReactComponent as CloseMenuButton } from '../../svg/close-button.svg';
+import './MenuButton.scss';
 
 function MenuButton({ isOpen, isMobile, toggleNav }) {
   const Button = isOpen ? CloseMenuButton : OpenMenuButton;

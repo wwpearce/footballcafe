@@ -5,7 +5,7 @@ const Textblock = ({ isMobile, isOpen }) => {
     <div className={`Textblock ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`}>
         <div className="Textblock__content">
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit mod tempor.
+            Football Cafe is the physical home of the beautiful game. We are a multi-disciplinary hospitality space and in-house streetwear label exploring culture through football. Visit us for a drink, watch a match in our state of the art theater room, or come shop original garments and vintage goods.
             </p>
         </div>
     </div>

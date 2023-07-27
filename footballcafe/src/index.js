@@ -9,6 +9,8 @@ import "./fonts/nimbus-sans/nimbus-bold.otf";
 import "./fonts/Avantgarde/avantgarde-regular.TTF";
 import "./fonts/Avantgarde/avantgarde-bold.TTF";
 
+document.title = "football cafe"; // Set the page title
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
