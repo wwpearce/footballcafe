@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Screen from './components/Screen';
 
@@ -19,6 +19,7 @@ import mobileBackgroundImage6 from './img/backgrounds/mobile/background--mobile-
 import mobileBackgroundImage7 from './img/backgrounds/mobile/background--mobile-7.png';
 
 function App() {
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState('');
 
   const getRandomBackgroundImage = () => {
@@ -54,12 +55,17 @@ function App() {
 
   useEffect(() => {
     const randomBackgroundImage = getRandomBackgroundImage();
-    setBackgroundImage(randomBackgroundImage);
+    const img = new Image();
+    img.src = randomBackgroundImage;
+    img.onload = () => {
+      setBackgroundImage(randomBackgroundImage);
+      setBackgroundLoaded(true);
+    };
   }, []);
 
   return (
-    <div className={`App ${isMobile() ? 'mobile' : 'desktop'}`}>
-      <Screen backgroundImage={backgroundImage} isMobile={isMobile()} />
+    <div className={"App"}>
+      <Screen backgroundImage={backgroundImage} isMobile={isMobile()} backgroundLoaded={backgroundLoaded}/>
     </div>
   );
 }

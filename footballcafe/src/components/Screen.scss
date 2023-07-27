@@ -9,6 +9,14 @@
     width: 100vw;
 
     background-color: $margin-color;
+    &.black {
+        opacity: 0;
+      }
+    
+      &.fade-in {
+        opacity: 1;
+        transition: opacity 1s ease-out;
+      }
 }
 
 .Screen__content {

@@ -5,7 +5,7 @@ import Nav from './Nav/Nav';
 import Ticker from './Ticker/Ticker';
 import MenuButton from './MenuButton/MenuButton';
 
-function Screen({ backgroundImage, isMobile }) {
+function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
   const style = backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : {};
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,7 +15,7 @@ function Screen({ backgroundImage, isMobile }) {
   };
 
   return (
-    <div className={`Screen ${isMobile ? 'mobile' : 'desktop'}`}>
+    <div className={`Screen ${isMobile ? 'mobile' : 'desktop'} ${backgroundLoaded ? 'fade-in' : 'black'}`}>
         <div className={`Screen__content ${isMobile ? 'mobile' : 'desktop'}`} style={style}>
           <MenuButton className={`menu-button-svg ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`} isOpen={isOpen} toggleNav={toggleNav} />
           <Nav isMobile={isMobile} isOpen={isOpen} />
@@ -25,5 +25,6 @@ function Screen({ backgroundImage, isMobile }) {
     </div>
   );
 }
+
 
 export default Screen;

@@ -7,8 +7,21 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: black;
 }
 
 p {
   font-family: "nimbus-sans";
 }
+
+// body{font-size:100%;}
+// i{font-size: 2em;}
+
+
+// @media screen and (min-width: 500px) {
+//     body{font-size: 150%;}
+// }
+
+// @media screen and (min-width: 700px) {
+//     body{font-size: 200%;}
+// }
