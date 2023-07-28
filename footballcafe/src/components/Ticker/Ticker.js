@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Ticker.scss';
 
-const tickerDest = "https://www.footballcafefc.com"; // Define the variable
+const tickerDest = "https://my.community.com/kylemartinosfootballcafe";
 
 function Ticker({ isMobile, backgroundLoaded }) {
     const [isPaused, setIsPaused] = useState(false);

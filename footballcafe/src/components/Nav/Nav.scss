@@ -11,18 +11,20 @@
   transition: all $nav-speed $nav-ease;
   font-family: "avantgarde-bold";
   user-select: none;
+  opacity: 0;
 
-&.open {
+  &.open {
     transform: translateX(0);
-}
+    opacity: 1;
+  }
 
-a {
+  a {
     color: $primary-color;
     text-decoration: none;
     text-transform: uppercase;
-}
+  }
 
-ul {
+  ul {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -31,7 +33,8 @@ ul {
     margin: 120px 3vw;
     color: $primary-color;
     font-size: 4.75rem;
-}
+    line-height: 4rem;
+  }
 
   &.desktop {
     width: 50%;
@@ -40,14 +43,15 @@ ul {
     background-color: transparent;
 
     ul {
-        height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 120px 2vw;
-    color: $primary-color;
-    font-size: 8.75rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 120px 2vw;
+      color: $primary-color;
+      font-size: 8.75rem;
+      line-height: 7.5rem;
     }
 
     &__button {
@@ -64,5 +68,12 @@ ul {
         }
       }
     }
+  }
+}
+
+@media only screen and (min-height: 1080px) {
+  .Nav.desktop ul {
+    margin-top: 140px;
+    // a little patch for ultra-wide screens
   }
 }
