@@ -58,15 +58,6 @@ function App() {
     mobileBackgroundImage7,
   ];
 
-  (function lockPortraitMode() {
-    if (typeof window.screen !== 'undefined') {
-      const lockOrientation = window.screen.lockOrientation || window.screen.mozLockOrientation || window.screen.msLockOrientation || (window.screen.orientation && window.screen.orientation.lock);
-      if (lockOrientation) {
-        lockOrientation.call(window.screen, 'portrait');
-      }
-    }
-  })();
-
   useEffect(() => {
     const randomBackgroundImage = getRandomBackgroundImage();
     const img = new Image();
