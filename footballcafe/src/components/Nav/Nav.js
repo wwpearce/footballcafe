@@ -1,8 +1,14 @@
 import './Nav.scss';
 import { useState } from 'react';
 
-function Nav({ isMobile, isOpen, toggleNav, toggleDefault, isDefault }) {
-  const [showOverlay, setShowOverlay] = useState(false);
+function Nav({
+  isMobile,
+  isOpen,
+  toggleNav,
+  toggleDefault,
+  isDefault,
+}) {
+  const [showOverlay] = useState(false);
 
   const handleNavItemClick = () => {
     if (isDefault) {
@@ -19,11 +25,21 @@ function Nav({ isMobile, isOpen, toggleNav, toggleDefault, isDefault }) {
   };
 
   return (
-    <nav className={`Nav ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`}>
+    <nav
+      className={`Nav ${isMobile ? 'mobile' : 'desktop'} ${
+        isOpen ? 'open' : ''
+      }`}
+    >
       <ul>
-        <li><div onClick={handleFCClick}>FC</div></li>
-        <li><div onClick={handleNavItemClick}>Program</div></li>
-        <li><div onClick={handleNavItemClick}>Shop</div></li>
+        <li>
+          <div onClick={handleFCClick}>FC</div>
+        </li>
+        <li>
+          <div onClick={handleNavItemClick}>Program</div>
+        </li>
+        <li>
+          <div onClick={handleNavItemClick}>Shop</div>
+        </li>
       </ul>
       {showOverlay && (
         <div className="overlay">
