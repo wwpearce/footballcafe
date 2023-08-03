@@ -2,29 +2,42 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Screen from './components/Screen';
 
-import desktopBackgroundImage1 from './img/backgrounds/desktop/background--desktop-1.png';
-import desktopBackgroundImage2 from './img/backgrounds/desktop/background--desktop-2.png';
-import desktopBackgroundImage3 from './img/backgrounds/desktop/background--desktop-3.png';
-import desktopBackgroundImage4 from './img/backgrounds/desktop/background--desktop-4.png';
-import desktopBackgroundImage5 from './img/backgrounds/desktop/background--desktop-5.png';
-import desktopBackgroundImage6 from './img/backgrounds/desktop/background--desktop-6.png';
-import desktopBackgroundImage7 from './img/backgrounds/desktop/background--desktop-7.png';
+import desktopBackgroundImage1 from './img/backgrounds/desktop/background--desktop-1_@2x.jpg';
+import desktopBackgroundImage2 from './img/backgrounds/desktop/background--desktop-2_@2x.jpg';
+import desktopBackgroundImage3 from './img/backgrounds/desktop/background--desktop-3_@2x.jpg';
+import desktopBackgroundImage4 from './img/backgrounds/desktop/background--desktop-4_@2x.jpg';
+import desktopBackgroundImage5 from './img/backgrounds/desktop/background--desktop-5_@2x.jpg';
+import desktopBackgroundImage6 from './img/backgrounds/desktop/background--desktop-6_@2x.jpg';
+import desktopBackgroundImage7 from './img/backgrounds/desktop/background--desktop-7_@2x.jpg';
+import smallDesktopBackgroundImage2 from './img/backgrounds/desktop_@1x/background--desktop-2_@1x.jpg';
+import smallDesktopBackgroundImage3 from './img/backgrounds/desktop_@1x/background--desktop-3_@1x.jpg';
+import smallDesktopBackgroundImage4 from './img/backgrounds/desktop_@1x/background--desktop-4_@1x.jpg';
+import smallDesktopBackgroundImage5 from './img/backgrounds/desktop_@1x/background--desktop-5_@1x.jpg';
+import smallDesktopBackgroundImage6 from './img/backgrounds/desktop_@1x/background--desktop-6_@1x.jpg';
+import smallDesktopBackgroundImage7 from './img/backgrounds/desktop_@1x/background--desktop-7_@1x.jpg';
+import smallDesktopBackgroundImage1 from './img/backgrounds/desktop_@1x/background--desktop-1_@1x.jpg';
 
-import mobileBackgroundImage1 from './img/backgrounds/mobile/background--mobile-1.png';
-import mobileBackgroundImage2 from './img/backgrounds/mobile/background--mobile-2.png';
-import mobileBackgroundImage3 from './img/backgrounds/mobile/background--mobile-3.png';
-import mobileBackgroundImage4 from './img/backgrounds/mobile/background--mobile-4.png';
-import mobileBackgroundImage5 from './img/backgrounds/mobile/background--mobile-5.png';
-import mobileBackgroundImage6 from './img/backgrounds/mobile/background--mobile-6.png';
-import mobileBackgroundImage7 from './img/backgrounds/mobile/background--mobile-7.png';
+import mobileBackgroundImage1 from './img/backgrounds/mobile/background--mobile-1.jpg';
+import mobileBackgroundImage2 from './img/backgrounds/mobile/background--mobile-2.jpg';
+import mobileBackgroundImage3 from './img/backgrounds/mobile/background--mobile-3.jpg';
+import mobileBackgroundImage4 from './img/backgrounds/mobile/background--mobile-4.jpg';
+import mobileBackgroundImage5 from './img/backgrounds/mobile/background--mobile-5.jpg';
+import mobileBackgroundImage6 from './img/backgrounds/mobile/background--mobile-6.jpg';
+import mobileBackgroundImage7 from './img/backgrounds/mobile/background--mobile-7.jpg';
 
 function App() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState('');
 
   const getRandomBackgroundImage = () => {
-    const backgroundImages = isMobile() ? mobileBackgroundImages : desktopBackgroundImages;
-    const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+    const backgroundImages = isMobile()
+      ? mobileBackgroundImages
+      : window.innerWidth < 1024
+      ? smallDesktopBackgroundImages
+      : desktopBackgroundImages;
+    const randomIndex = Math.floor(
+      Math.random() * backgroundImages.length
+    );
     return backgroundImages[randomIndex];
   };
 
@@ -34,9 +47,9 @@ function App() {
   };
 
   function isLandscape() {
-      const { width, height } = window.screen;
-      return width > height;
-  };
+    const { width, height } = window.screen;
+    return width > height;
+  }
 
   const desktopBackgroundImages = [
     desktopBackgroundImage1,
@@ -46,6 +59,16 @@ function App() {
     desktopBackgroundImage5,
     desktopBackgroundImage6,
     desktopBackgroundImage7,
+  ];
+
+  const smallDesktopBackgroundImages = [
+    smallDesktopBackgroundImage1,
+    smallDesktopBackgroundImage2,
+    smallDesktopBackgroundImage3,
+    smallDesktopBackgroundImage4,
+    smallDesktopBackgroundImage5,
+    smallDesktopBackgroundImage6,
+    smallDesktopBackgroundImage7,
   ];
 
   const mobileBackgroundImages = [
@@ -69,8 +92,16 @@ function App() {
   }, []);
 
   return (
-    <div className={`App ${isMobile() ? 'mobile' : 'desktop'} ${isLandscape() ? 'landscape' : 'portrait'}`}>
-      <Screen backgroundImage={backgroundImage} isMobile={isMobile()} backgroundLoaded={backgroundLoaded}/>
+    <div
+      className={`App ${isMobile() ? 'mobile' : 'desktop'} ${
+        isLandscape() ? 'landscape' : 'portrait'
+      }`}
+    >
+      <Screen
+        backgroundImage={backgroundImage}
+        isMobile={isMobile()}
+        backgroundLoaded={backgroundLoaded}
+      />
     </div>
   );
 }
