@@ -6,10 +6,11 @@ function MenuButton({ isOpen, isMobile, toggleNav }) {
   const Button = isOpen ? CloseMenuButton : OpenMenuButton;
   console.log('isOpen:', isOpen);
 
-
   return (
     <Button
-      className={`menu-button-svg ${isMobile ? 'mobile' : 'desktop'} ${isOpen ? 'open' : ''}`}
+      className={`menu-button-svg ${
+        isMobile ? 'mobile' : 'desktop'
+      } ${isOpen ? 'open' : ''}`}
       onClick={toggleNav}
     />
   );

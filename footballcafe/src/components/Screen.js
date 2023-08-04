@@ -4,6 +4,7 @@ import Textblock from './Textblock/Textblock';
 import Nav from './Nav/Nav';
 import Ticker from './Ticker/Ticker';
 import MenuButton from './MenuButton/MenuButton';
+import Announcement from './Announcement/Announcement';
 
 function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
   const style = backgroundImage
@@ -11,6 +12,8 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
     : {};
   const [isOpen, setIsOpen] = useState(false);
   const [isDefault, setIsDefault] = useState(true);
+  const [isAnnouncementVisible, setIsAnnouncementVisible] =
+    useState(false);
 
   const textBlockContent =
     'Football Cafe is the physical home of the beautiful game. We are a hospitality space and streetwear label exploring international culture through football. Visit us for a drink, watch a match in our theater room, or shop original garments and vintage goods.';
@@ -22,6 +25,10 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
 
   const toggleDefault = () => {
     setIsDefault(!isDefault);
+  };
+
+  const toggleAnnouncement = () => {
+    setIsAnnouncementVisible(!isAnnouncementVisible);
   };
 
   const handleTouchStart = (event) => {
@@ -70,6 +77,13 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
         }`}
         style={style}
       >
+        {isAnnouncementVisible ? (
+          <Announcement
+            isAnnouncementVisible={isAnnouncementVisible}
+            toggleAnnouncement={toggleAnnouncement}
+            headingContent={'Coming Soon'}
+          />
+        ) : null}
         <MenuButton
           className={`menu-button-svg ${
             isMobile ? 'mobile' : 'desktop'
@@ -83,6 +97,7 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
           toggleNav={toggleNav}
           toggleDefault={toggleDefault}
           isDefault={isDefault}
+          toggleAnnouncement={toggleAnnouncement}
         />
         <Textblock
           isMobile={isMobile}

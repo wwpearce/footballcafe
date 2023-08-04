@@ -7,20 +7,12 @@ function Nav({
   toggleNav,
   toggleDefault,
   isDefault,
+  toggleAnnouncement,
 }) {
   const [showOverlay] = useState(false);
 
   const handleNavItemClick = () => {
-    if (isDefault) {
-      toggleDefault();
-    }
-    toggleNav();
-  };
-
-  const handleFCClick = () => {
-    if (!isDefault) {
-      toggleDefault();
-    }
+    toggleAnnouncement();
     toggleNav();
   };
 
@@ -32,7 +24,7 @@ function Nav({
     >
       <ul>
         <li>
-          <div onClick={handleFCClick}>FC</div>
+          <div onClick={handleNavItemClick}>FC</div>
         </li>
         <li>
           <div onClick={handleNavItemClick}>Program</div>
