@@ -28,37 +28,37 @@ function Ticker({ isMobile, backgroundLoaded }) {
         }`}
       >
         <span>141 Chrystie St New York, NY</span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>
           <a href={tickerDest}>TEXT 917 909 6649</a>
         </span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>141 Chrystie St New York, NY</span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>
           <a href={tickerDest}>TEXT 917 909 6649</a>
         </span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>141 Chrystie St New York, NY</span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>
           <a href={tickerDest}>TEXT 917 909 6649</a>
         </span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>141 Chrystie St New York, NY</span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>
           <a href={tickerDest}>TEXT 917 909 6649</a>
         </span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>141 Chrystie St New York, NY</span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>
           <a href={tickerDest}>TEXT 917 909 6649</a>
         </span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>141 Chrystie St New York, NY</span>
-        <span>&#47;&#47;&#47;</span>
+        <span>&lt;•&gt;</span>
         <span>
           <a href={tickerDest}>TEXT 917 909 6649</a>
         </span>

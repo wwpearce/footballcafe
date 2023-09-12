@@ -5,6 +5,7 @@ function Announcement({
   headingContent,
   isAnnouncementVisible,
   toggleAnnouncement,
+  isDesktop,
 }) {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,7 +21,8 @@ function Announcement({
     <div
       className={`Announcement ${
         isAnnouncementVisible ? 'visible' : ''
-      }`}
+      }
+      ${isDesktop ? 'desktop' : ''}`}
     >
       <h1>{headingContent}</h1>
     </div>

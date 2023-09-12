@@ -81,6 +81,7 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
           <Announcement
             isAnnouncementVisible={isAnnouncementVisible}
             toggleAnnouncement={toggleAnnouncement}
+            isDesktop={!isMobile}
             headingContent={'Coming Soon'}
           />
         ) : null}
