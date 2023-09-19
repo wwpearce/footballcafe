@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .swiper-wrapper {
+    transition-duration: 2000000ms !important;
+  }
+}
+.swiper-wrapper {
+  transition-duration: 1000000ms !important;
+  cursor: pointer;
+}
+.swiper-wrapper:hover {
+  transform: none !important;
+}
+a {
+  text-decoration: none;
+}

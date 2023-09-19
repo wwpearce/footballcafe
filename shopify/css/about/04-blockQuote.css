@@ -1,0 +1,10 @@
+.container {
+  max-width: unset;
+}
+.blockqoute__image {
+  flex: 0 0 49%;
+  max-width: 49%;
+}
+.blockqoute__image__block:after {
+  display: none;
+}

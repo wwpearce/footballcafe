@@ -1,0 +1,35 @@
+  .product__info-wrapper * {
+    color: #ceff00;
+  }
+  .product__outer {
+    gap: 20px;
+  }
+  .product__info-wrapper {
+    padding-top: 0;
+  }
+  * {
+    text-transform: uppercase;
+  }
+  .shopify-payment-button__button {
+    background-color: #ceff00;
+    color: black;
+  }
+  .product-about__wrapper {
+    border-top: 1px solid #ceff00;
+    border-bottom: 1px solid #ceff00;
+  }
+  .product-parameters__variant {
+    border-top: 1px solid #ceff00;
+    padding-top: 18px;
+  }
+  @media (min-width: 1200px) {
+    .product-form__submit {
+      width: 407px;
+    }
+    .product-form__quantity {
+      width: 175px;
+    }
+    .shopify-payment-button__button {
+      width: 221px;
+    }
+  }

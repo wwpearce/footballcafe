@@ -1,0 +1,9 @@
+input {
+  background-color: #ceff00;
+  border: 1px solid black;
+}
+@media (min-width: 1200px) {
+  .footer__blocks-wrapper {
+    align-items: baseline;
+  }
+}

@@ -1,0 +1,91 @@
+.collection,
+.product > #MainContent,
+.product section,
+#contact * section,
+#contact * input,
+#contact * textarea,
+#contact * input::placeholder,
+#contact * textarea::placeholder {
+  background-color: black;
+  color: #CEFF00;
+}
+.product h2 {
+  color: #CEFF00;
+}
+#about > #MainContent > * section {
+  background-color: white;
+}
+.article .breadcrumb,
+#events .breadcrumb,
+#about .breadcrumb {
+  display: none;
+}
+.article #MainContent,
+.article section,
+#events section,
+#about section {
+  background-color: white;
+}
+#events .ticker-section {
+  background-color: #CEFF00;
+  position: relative;
+}
+.article-footer {
+  display: none;
+}
+
+.tscBrandContainer {
+  display: none;
+}
+
+.calendar-container * {
+  color: black;
+}
+
+.page.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.page.contact > #MainContent {
+      height: 775px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+  .footer__blocks-wrapper {
+    align-items: baseline;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-wrapper {
+    width: 400px;
+  }
+}
+@media (min-width: 768px) {
+
+.image-with-text {
+  background-color: white;
+  color: black;
+}
+.subtitle,
+.h2 {
+  color: inherit;
+}
+.image-with-text__block-text__wrapper {
+  padding: 0 0 0 40px;
+}
+.image-with-text__block-image {
+  margin-right: 40px;
+}
+}
+
+@media (min-width: 768px) {
+  .product-form__submit {
+  width: 407px;
+}
+.product-form__quantity {
+  width: 175px;
+}
+}

@@ -1,0 +1,13 @@
+.h4 {
+  text-transform: capitalize;
+  font-size: 50px;
+}
+.header__list > li:last-child {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.header__list > li:last-child > a {
+  text-transform: capitalize;
+  font-size: 50px;
+}

@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+  .image-with-text {
+    background-color: white;
+    color: black;
+  }
+  .subtitle,
+  .h2 {
+    color: inherit;
+  }
+  .image-with-text__block-text__wrapper {
+    padding: 0 0 0 40px;
+  }
+  .image-with-text__block-image {
+    margin-right: 40px;
+  }
+}
