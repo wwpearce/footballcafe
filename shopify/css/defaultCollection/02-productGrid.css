@@ -1,0 +1,20 @@
+
+.card-wrapper {
+  background-color: black;
+}
+.card-information__wrapper > * div,
+a,
+dt,
+span {
+  color: #ceff00;
+}
+.card-information__wrapper > * div,
+a,
+dt {
+  font-size: 30px;
+}
+@media (min-width: 1000px) {
+  .card-wrapper {
+    width: 400px;
+  }
+}

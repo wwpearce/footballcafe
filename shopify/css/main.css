@@ -1,29 +1,29 @@
 .collection,
 .product > #MainContent,
-.product section,
-#contact * section,
-#contact * input,
-#contact * textarea,
-#contact * input::placeholder,
-#contact * textarea::placeholder {
+.product section
+ {
   background-color: black;
   color: #CEFF00;
+  padding-bottom: 80px;
 }
 .product h2 {
   color: #CEFF00;
-}
-#about > #MainContent > * section {
-  background-color: white;
 }
 .article .breadcrumb,
 #events .breadcrumb,
 #about .breadcrumb {
   display: none;
 }
+#about > #MainContent > * section,
 .article #MainContent,
 .article section,
 #events section,
-#about section {
+#about section,
+#contact * section,
+#contact * input,
+#contact * textarea,
+#contact * input::placeholder,
+#contact * textarea::placeholder {
   background-color: white;
 }
 #events .ticker-section {
@@ -50,12 +50,6 @@
 .page.contact > #MainContent {
       height: 775px;
     position: relative;
-}
-
-@media (min-width: 768px) {
-  .footer__blocks-wrapper {
-    align-items: baseline;
-  }
 }
 
 @media (min-width: 1200px) {

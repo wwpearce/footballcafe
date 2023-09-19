@@ -1,0 +1,23 @@
+input {
+  background-color: #ceff00;
+  border: 1px solid black;
+}
+
+footer__blocks-wrapper {
+  align-items: unset;
+}
+
+@media (min-width: 1000px) {
+  .footer-block--menu,
+  .footer__column--social {
+    transform: translateY(25%);
+  }
+  .richtext__content p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .footer-block--logo,
+  .richtext__content {
+    max-width: 300px;
+  }
+}

@@ -1,7 +1,9 @@
-.contact__title {
-  color: #ceff00;
-}
+
 button {
-  background-color: #ceff00;
-  color: black;
+  background-color: black;
+  color: white;
+}
+
+input, textarea {
+  border-color: black;
 }

@@ -1,6 +1,6 @@
 import './Textblock.scss';
 import { ReactComponent as InstagramIcon } from '../../svg/instagram-icon.svg';
-import { ReactComponent as TwiterIcon } from '../../svg/twitter-icon.svg';
+import { ReactComponent as EmailIcon } from '../../svg/email-icon.svg';
 
 const Textblock = ({
   isMobile,
@@ -21,13 +21,20 @@ const Textblock = ({
         <p>{isDefault ? textBlockContent : textBlockHeading}</p>
       </div>
       <div className="link-container">
-        <a href="instagram.com">
+        <a
+          href="https://www.instagram.com/footballcafe_fc/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <InstagramIcon className="icons" />
         </a>
-        <a href="twitter.com">
-          <TwiterIcon className="icons" />
+        <a
+          href="https://footballcafe.myshopify.com/pages/contact"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <EmailIcon className="icons" />
         </a>
-        <a href="apple.com">contact</a>
       </div>
     </div>
   );

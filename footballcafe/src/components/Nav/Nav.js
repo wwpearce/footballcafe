@@ -11,11 +11,6 @@ function Nav({
 }) {
   const [showOverlay] = useState(false);
 
-  const handleNavItemClick = () => {
-    toggleAnnouncement();
-    toggleNav();
-  };
-
   return (
     <nav
       className={`Nav ${isMobile ? 'mobile' : 'desktop'} ${
@@ -24,13 +19,19 @@ function Nav({
     >
       <ul>
         <li>
-          <div onClick={handleNavItemClick}>FC</div>
+          <a href="https://footballcafe.myshopify.com/collections/all">
+            Shop
+          </a>
         </li>
         <li>
-          <div onClick={handleNavItemClick}>Program</div>
+          <a href="https://footballcafe.myshopify.com/pages/about">
+            About
+          </a>
         </li>
         <li>
-          <div onClick={handleNavItemClick}>Shop</div>
+          <a href="https://footballcafe.myshopify.com/pages/events">
+            Events
+          </a>
         </li>
       </ul>
       {showOverlay && (
