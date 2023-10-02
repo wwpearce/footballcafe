@@ -22,7 +22,7 @@ const Textblock = ({
       </div>
       <div className="link-container">
         <a
-          href="https://www.instagram.com/footballcafe_fc/"
+          href="https://www.instagram.com/footballcafe/"
           target="_blank"
           rel="noreferrer"
         >

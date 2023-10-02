@@ -26,10 +26,11 @@
     }
     .icons {
       position: relative;
-      width: 40px;
+      width: auto;
       height: 40px;
       margin-right: .5em;
       fill: $primary-color;
+      stroke-width: 1px;
     }
     a {
       display: block;

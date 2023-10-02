@@ -2,15 +2,10 @@ input {
   background-color: #ceff00;
   border: 1px solid black;
 }
-
-footer__blocks-wrapper {
-  align-items: unset;
-}
-
 @media (min-width: 1000px) {
   .footer-block--menu,
   .footer__column--social {
-    transform: translateY(25%);
+    transform: translateY(95px);
   }
   .richtext__content p {
     font-size: 18px;
@@ -19,5 +14,12 @@ footer__blocks-wrapper {
   .footer-block--logo,
   .richtext__content {
     max-width: 300px;
+  }
+  .footer__blocks-wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .footer-block--newsletter {
+    justify-content: center;
   }
 }

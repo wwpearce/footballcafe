@@ -2,8 +2,16 @@
   color: #ceff00;
 }
 
+.product__info-wrapper {
+  margin-top: 0;
+}
+
 .product__outer {
-  gap: 20px;
+  gap: 0;
+}
+
+.breadcrumb {
+  display: none;
 }
 
 .shopify-payment-button__button {
@@ -23,4 +31,10 @@ label[value="black"] {
   .product-form__submit {
     width: 407px;
   }
+}
+
+@media (min-width: 768px) {
+.product__outer {
+  gap: 20px;
+}
 }
