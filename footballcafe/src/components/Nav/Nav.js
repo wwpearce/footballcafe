@@ -19,9 +19,7 @@ function Nav({
     >
       <ul>
         <li>
-          <a href="https://footballcafe.myshopify.com/collections/all">
-            Shop
-          </a>
+          <a href="https://footballcafe.shop">Shop</a>
         </li>
         <li>
           <a href="https://footballcafe.myshopify.com/pages/about">

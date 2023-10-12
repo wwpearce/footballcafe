@@ -1,16 +1,15 @@
 .collection,
 .product > #MainContent,
-.product section
- {
+.product section {
   background-color: black;
-  color: #CEFF00;
+  color: #ceff00;
   padding-bottom: 80px;
 }
 .template-search__results {
-  background-color: #CEFF00;
+  background-color: #ceff00;
 }
 .product h2 {
-  color: #CEFF00;
+  color: #ceff00;
 }
 .article .breadcrumb,
 #events .breadcrumb,
@@ -30,7 +29,7 @@
   background-color: white;
 }
 #events .ticker-section {
-  background-color: #CEFF00;
+  background-color: #ceff00;
   position: relative;
 }
 .article-footer {
@@ -51,12 +50,12 @@
 }
 
 .page.contact > #MainContent {
-      height: 775px;
-    position: relative;
+  height: 775px;
+  position: relative;
 }
 
-
-footer .footer-block--logo, footer .footer-block-menu__item__text {
+footer .footer-block--logo,
+footer .footer-block-menu__item__text {
   max-width: unset;
 }
 
@@ -65,43 +64,47 @@ footer .footer-block--logo, footer .footer-block-menu__item__text {
   display: none;
 }
 
-#Search-In-Template, #Search-In-Template::placeholder {
-  color: #CEFF00;
+#Search-In-Template,
+#Search-In-Template::placeholder {
+  color: #ceff00;
 }
 
 @media (max-width: 768px) {
   .card-wrapper {
     background-color: transparent;
   }
+  input::placeholder {
+    overflow: visible;
+  }
+  .footer-block--logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .card-wrapper {
     width: 400px;
   }
-}
-@media (min-width: 768px) {
-
-.image-with-text {
-  background-color: white;
-  color: black;
-}
-.subtitle,
-.h2 {
-  color: inherit;
-}
-.image-with-text__block-text__wrapper {
-  padding: 0 0 0 40px;
-}
-.image-with-text__block-image {
-  margin-right: 40px;
-}
- .product-form__submit {
-  width: 407px;
-}
-.product-form__quantity {
-  width: 175px;
-}
-
+  .image-with-text {
+    background-color: white;
+    color: black;
+  }
+  .subtitle,
+  .h2 {
+    color: inherit;
+  }
+  .image-with-text__block-text__wrapper {
+    padding: 0 0 0 40px;
+  }
+  .image-with-text__block-image {
+    margin-right: 40px;
+  }
+  .product-form__submit {
+    width: 407px;
+  }
+  .product-form__quantity {
+    width: 175px;
+  }
 }
