@@ -84,9 +84,6 @@ footer .footer-block-menu__item__text {
 }
 
 @media (min-width: 768px) {
-  .card-wrapper {
-    width: 400px;
-  }
   .image-with-text {
     background-color: white;
     color: black;
@@ -106,5 +103,8 @@ footer .footer-block-menu__item__text {
   }
   .product-form__quantity {
     width: 175px;
+  }
+  .image-banner-section {
+    height: 85vh;
   }
 }
