@@ -5,8 +5,12 @@
 }
 .header__list > li:last-child > a {
   text-transform: capitalize;
-  font-size: 50px;
+  font-size: 40px;
+  letter-spacing: -1.5px;
 }
 .header__cart-wrapper::before {
   display: none;
+}
+.header__heading > a {
+  height: 50px;
 }

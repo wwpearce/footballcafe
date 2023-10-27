@@ -16,7 +16,7 @@ function Screen({ backgroundImage, isMobile, backgroundLoaded }) {
     useState(false);
 
   const textBlockContent =
-    'Football Cafe is the physical home of the beautiful game. We are a hospitality space and streetwear label exploring international culture through football. Visit us for a drink, watch a match in our theater room, or shop original garments and vintage goods.';
+    'Football Cafe was born in the world’s city to celebrate the world’s game.';
   const textBlockHeading = 'Coming soon';
 
   const toggleNav = () => {

@@ -1,6 +1,6 @@
 import './Textblock.scss';
 import { ReactComponent as InstagramIcon } from '../../svg/instagram-icon.svg';
-import { ReactComponent as EmailIcon } from '../../svg/email-icon.svg';
+import { ReactComponent as EmailIcon } from '../../svg/email1-01.svg';
 
 const Textblock = ({
   isMobile,

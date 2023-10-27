@@ -1,19 +1,15 @@
 .product__info-wrapper * {
   color: #ceff00;
 }
-
 .product__info-wrapper {
   margin-top: 0;
 }
-
 .product__outer {
   gap: 0;
 }
-
 .breadcrumb {
   display: none;
 }
-
 .shopify-payment-button__button {
   background-color: #ceff00;
   color: black;
@@ -21,21 +17,20 @@
 label[value="black"] {
   border-color: #ceff00;
 }
-
 .product-about__wrapper,
 .product-parameters__variant {
   border-top: 1px solid #ceff00;
 }
-
 @media (max-width: 768px) {
   .product-parameters {
     margin-top: 0;
-    padding-top: 0;
+  }
+  .product-form__group-name {
+    padding-top: 32px;
   }
 }
-
 @media (min-width: 768px) {
-.product__outer {
-  gap: 20px;
-}
+  .product__outer {
+    gap: 20px;
+  }
 }

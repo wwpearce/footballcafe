@@ -9,14 +9,23 @@
     font-size: $paragraph-font-size;
     color: $primary-color;
     &.desktop {
-        width: 50%;
+        width: auto;
         margin-top: 0;
+        .link-container {
+          justify-content: flex-end;
+        }
+        .icons {
+          height: 35px;
+        }
     }
     &.mobile {
         transition: all $nav-speed $nav-ease;
         transform: translateX(0);
         &.open {
             transform: translateX(150vw);
+        }
+        .link-container {
+          justify-content: flex-start;
         }
     }
     .link-container {

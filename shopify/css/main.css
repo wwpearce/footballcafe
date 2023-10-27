@@ -32,43 +32,28 @@
   background-color: #ceff00;
   position: relative;
 }
-.article-footer {
-  display: none;
-}
-
-.tscBrandContainer {
-  display: none;
-}
-
-.calendar-container * {
-  color: black;
-}
-
 .page.contact {
   display: flex;
   flex-direction: column;
 }
-
 .page.contact > #MainContent {
   height: 775px;
   position: relative;
 }
-
 footer .footer-block--logo,
 footer .footer-block-menu__item__text {
   max-width: unset;
 }
-
+.article-footer,
+.tscBrandContainer,
 .header-mobile__menu-main > li:last-child,
 .header-mobile__submenu > li:last-child {
   display: none;
 }
-
 #Search-In-Template,
 #Search-In-Template::placeholder {
   color: #ceff00;
 }
-
 @media (max-width: 768px) {
   .card-wrapper {
     background-color: transparent;
@@ -81,8 +66,10 @@ footer .footer-block-menu__item__text {
     flex-direction: column;
     align-items: center;
   }
+  .index .image-banner-section {
+    --image-height: 61vh !important;
+  }
 }
-
 @media (min-width: 768px) {
   .image-with-text {
     background-color: white;
@@ -104,7 +91,7 @@ footer .footer-block-menu__item__text {
   .product-form__quantity {
     width: 175px;
   }
-  .image-banner-section {
-    height: 85vh;
-  }
+}
+.password-main {
+  padding-top: 0;
 }

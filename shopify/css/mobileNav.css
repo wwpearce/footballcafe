@@ -1,7 +1,8 @@
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .h4 {
     text-transform: capitalize;
     font-size: 20px;
+    letter-spacing: -1.5px;
   }
   path {
     stroke-width: 2px;
@@ -12,6 +13,11 @@
     mix-blend-mode: unset;
   }
   .active > * path {
+    color: #ceff00;
+  }
+  .h6,
+  .header-mobile__submenu,
+  .header-mobile .animate-bg * {
     color: #ceff00;
   }
 }
