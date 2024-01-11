@@ -1,2 +1,2 @@
 # footballcafe
-Football cafe
+Hello. This git repo contains two directories, football cafe (containing the footballcafe.com homepage, in the form of a react app) and shopify (containing several css sheets that correspond to different sections of footballcafe.shop). All the shopify css is already backed up on shopify in a theme backup but should you need it, it's here. The css is divided by page and then by a numbered secion on the page. Just match the number and copy / replace to update.

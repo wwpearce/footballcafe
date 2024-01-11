@@ -1,0 +1,10 @@
+.totals *,
+textarea,
+.quantity__button,
+.quantity__button svg path {
+  color: #ceff00;
+}
+
+.quantity__button svg {
+  position: absolute;
+}
